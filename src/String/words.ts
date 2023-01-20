@@ -1,3 +1,4 @@
+import { purry } from "remeda";
 import unicodeWords from "../../internal/unicodeWords";
 
 const a = "";
@@ -14,7 +15,14 @@ function asciiWords(str: string) {
   return str.match(reAsciiWord);
 }
 
-export function words(string: string, pattern?: MatchParams[0] | string) {
+export function words(string: string) {
+  const result = hasUnicodeWord(string)
+    ? unicodeWords(string)
+    : asciiWords(string);
+  return result || [];
+}
+
+function _wordsWithPattern(string: string, pattern: MatchParams[0] | string) {
   if (pattern === undefined) {
     const result = hasUnicodeWord(string)
       ? unicodeWords(string)
@@ -22,4 +30,15 @@ export function words(string: string, pattern?: MatchParams[0] | string) {
     return result || [];
   }
   return string.match(pattern as MatchParams[0]) || [];
+}
+
+export function wordsWithPattern(
+  string: string,
+  pattern: MatchParams[0] | string
+): string[];
+export function wordsWithPattern(
+  pattern: MatchParams[0] | string
+): (string: string) => string[];
+export function wordsWithPattern(): any {
+  return purry(_wordsWithPattern, arguments);
 }

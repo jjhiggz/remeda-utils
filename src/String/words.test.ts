@@ -1,6 +1,6 @@
 import { map, times } from "remeda";
 import { describe, expect, it } from "vitest";
-import { words } from "./words";
+import { words, wordsWithPattern } from "./words";
 import { burredLetters } from "../../test-utils";
 
 describe("words", function () {
@@ -16,11 +16,17 @@ describe("words", function () {
   });
 
   it("should support a `pattern`", function () {
-    expect(words("abcd", /ab|cd/g)).toEqual(["ab", "cd"]);
-    expect(Array.from(words("abcd", "ab|cd"))).toEqual(["ab"]);
+    expect(wordsWithPattern("abcd", /ab|cd/g)).toEqual(["ab", "cd"]);
+    expect(Array.from(wordsWithPattern("abcd", "ab|cd"))).toEqual(["ab"]);
+  });
+
+  it("should support a data last `pattern`", function () {
+    expect(wordsWithPattern("abcd", /ab|cd/g)).toEqual(["ab", "cd"]);
+    expect(Array.from(wordsWithPattern("abcd", "ab|cd"))).toEqual(["ab"]);
   });
 
   it("should work with compound words", function () {
+    console.log(words("12ft"));
     expect(words("12ft")).toEqual(["12", "ft"]);
     expect(words("aeiouAreVowels")).toEqual(["aeiou", "Are", "Vowels"]);
     expect(words("enable 6h format")).toEqual(["enable", "6", "h", "format"]);
