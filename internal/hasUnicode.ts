@@ -25,9 +25,11 @@ const reHasUnicode = RegExp(
  * Checks if `string` contains Unicode symbols.
  *
  * @private
- * @param {string} str The string to inspect.
+ * @param {string} string The string to inspect.
  * @returns {boolean} Returns `true` if a symbol is found, else `false`.
  */
-function hasUnicode(str: string) {
-  return reHasUnicode.test(str);
+export function hasUnicode(string: string) {
+  return reHasUnicode.test(string);
 }
+
+export default hasUnicode;
