@@ -1,3 +1,5 @@
+// @ts-nocheck - may need to be at the start of fil
+
 /** Used to detect when a function becomes hot. */
 var HOT_COUNT = 150;
 
