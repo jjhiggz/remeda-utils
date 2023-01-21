@@ -16,6 +16,4 @@ import createCaseFirst from "../../internal/createCaseFirst";
  * upperFirst('FRED')
  * // => 'FRED'
  */
-const upperFirst = createCaseFirst("toUpperCase");
-
-export default upperFirst;
+export const upperFirst = createCaseFirst("toUpperCase");

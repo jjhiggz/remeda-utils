@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import upperFirst from "./upperFirst";
+import { upperFirst } from "./upperFirst";
 
 describe("upperFirst", function () {
   it("should uppercase only the first character", function () {

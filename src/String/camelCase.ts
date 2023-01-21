@@ -1,5 +1,5 @@
 import { toString } from "./toString";
-import upperFirst from "./upperFirst";
+import { upperFirst } from "./upperFirst";
 import { words } from "./words";
 
 /**
