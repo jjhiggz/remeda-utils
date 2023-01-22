@@ -15,6 +15,7 @@
     "preversion",
     "regexes",
     "Surr",
+    "Unescapes",
     "wordies"
   ]
 }
