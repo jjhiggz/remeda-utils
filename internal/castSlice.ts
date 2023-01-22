@@ -12,5 +12,3 @@ export function castSlice<T>(array: T[], start: number, end?: number) {
   end = end === undefined ? length : end;
   return !start && end >= length ? array : array.slice(start, end);
 }
-
-export default castSlice;

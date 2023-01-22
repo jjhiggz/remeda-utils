@@ -21,7 +21,7 @@ import { words } from "./words";
  * camelCase('__FOO_BAR__')
  * // => 'fooBar'
  */
-const camelCase = (string: string) => {
+export const camelCase = (string: string) => {
   return words(toString(string).replace(/['\u2019]/g, "")).reduce(
     (result, word, index) => {
       word = word.toLowerCase();
@@ -30,5 +30,3 @@ const camelCase = (string: string) => {
     ""
   );
 };
-
-export default camelCase;

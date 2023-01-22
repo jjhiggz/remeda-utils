@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import unescape from "./unescape";
-import escape from "./escape";
+import { unescape } from "./unescape";
+import { escape } from "./escape";
 describe("unescape", function () {
   var escaped = "&amp;&lt;&gt;&quot;&#39;/",
     unescaped = "&<>\"'/";

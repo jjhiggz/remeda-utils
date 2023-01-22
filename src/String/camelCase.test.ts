@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import camelCase from "./camelCase";
+import { camelCase } from "./camelCase";
 
 describe("camelCase", function () {
   it("should work with numbers", function () {

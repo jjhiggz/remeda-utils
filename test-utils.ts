@@ -1,3 +1,4 @@
+import { expect } from "vitest";
 export const burredLetters = [
   // Latin-1 Supplement letters.
   "\xc0",
@@ -521,3 +522,5 @@ export const stubObject = function () {
 export const stubString = function () {
   return "";
 };
+
+export const assertEqual = (A: any, B: any) => expect(A).toEqual(B);

@@ -20,7 +20,7 @@
  * endsWith('abc', 'b', 2)
  * // => true
  */
-function endsWith(string: string, target: string, position?: number) {
+export function endsWith(string: string, target: string, position?: number) {
   const { length } = string;
   position = position === undefined ? length : +position;
   if (position < 0 || position != position) {
@@ -32,5 +32,3 @@ function endsWith(string: string, target: string, position?: number) {
   position -= target.length;
   return position >= 0 && string.slice(position, end) == target;
 }
-
-export default endsWith;

@@ -11,7 +11,7 @@ import { castSlice } from "./castSlice";
  */
 
 // todo see if we can fix this typing to be String method instead of any
-function createCaseFirst(methodName: any) {
+export function createCaseFirst(methodName: any) {
   return (string: string): string => {
     if (!string) {
       return "";
@@ -29,5 +29,3 @@ function createCaseFirst(methodName: any) {
     return (chr as any)[methodName]() + trailing;
   };
 }
-
-export default createCaseFirst;

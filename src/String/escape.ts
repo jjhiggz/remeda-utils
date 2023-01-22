@@ -46,5 +46,3 @@ export function escape(string: string) {
       )
     : string || "";
 }
-
-export default escape;

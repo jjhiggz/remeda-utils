@@ -31,5 +31,3 @@ const reHasUnicode = RegExp(
 export function hasUnicode(string: string) {
   return reHasUnicode.test(string);
 }
-
-export default hasUnicode;

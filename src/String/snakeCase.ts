@@ -24,10 +24,8 @@ import { words } from "./words";
  * snakeCase('foo2bar')
  * // => 'foo_2_bar'
  */
-const snakeCase = (string: string) =>
+export const snakeCase = (string: string) =>
   words(toString(string).replace(/['\u2019]/g, "")).reduce(
     (result, word, index) => result + (index ? "_" : "") + word.toLowerCase(),
     ""
   );
-
-export default snakeCase;

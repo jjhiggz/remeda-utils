@@ -1,4 +1,4 @@
-import createCaseFirst from "../../internal/createCaseFirst";
+import { createCaseFirst } from "../../internal/createCaseFirst";
 
 /**
  * Converts the first character of `string` to upper case.

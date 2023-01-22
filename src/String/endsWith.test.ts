@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import endsWith from "./endswith";
 import { map } from "remeda";
 import { MAX_SAFE_INTEGER, falsey, stubTrue } from "../../test-utils";
+import { endsWith } from "./endsWith";
 
 describe("endsWith", function () {
   var string = "abc";

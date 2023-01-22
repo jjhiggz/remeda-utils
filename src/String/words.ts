@@ -1,5 +1,5 @@
 import { purry } from "remeda";
-import unicodeWords from "../../internal/unicodeWords";
+import { unicodeWords } from "../../internal/unicodeWords";
 
 const a = "";
 type MatchParams = Parameters<typeof a.match>;

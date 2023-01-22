@@ -26,7 +26,6 @@ describe("words", function () {
   });
 
   it("should work with compound words", function () {
-    console.log(words("12ft"));
     expect(words("12ft")).toEqual(["12", "ft"]);
     expect(words("aeiouAreVowels")).toEqual(["aeiou", "Are", "Vowels"]);
     expect(words("enable 6h format")).toEqual(["enable", "6", "h", "format"]);

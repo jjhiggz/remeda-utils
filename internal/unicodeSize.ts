@@ -1,5 +1,4 @@
 /** Used to compose unicode character classes. */
-
 const rsAstralRange = "\\ud800-\\udfff";
 const rsComboMarksRange = "\\u0300-\\u036f";
 const reComboHalfMarksRange = "\\ufe20-\\ufe2f";
@@ -44,12 +43,16 @@ const rsSymbol = `(?:${[
 const reUnicode = RegExp(`${rsFitz}(?=${rsFitz})|${rsSymbol + rsSeq}`, "g");
 
 /**
- * Converts a Unicode `string` to an array.
+ * Gets the size of a Unicode `string`.
  *
  * @private
- * @param {string} string The string to convert.
- * @returns {Array} Returns the converted array.
+ * @param {string} string The string inspect.
+ * @returns {number} Returns the string size.
  */
-export function unicodeToArray(string: string) {
-  return string.match(reUnicode) || [];
+export function unicodeSize(string: string) {
+  let result = (reUnicode.lastIndex = 0);
+  while (reUnicode.test(string)) {
+    ++result;
+  }
+  return result;
 }

@@ -29,7 +29,7 @@ const reHasEscapedHtml = RegExp(reEscapedHtml.source);
  * unescape('fred, barney, &amp; pebbles')
  * // => 'fred, barney, & pebbles'
  */
-function unescape(string: string) {
+export function unescape(string: string) {
   return string && reHasEscapedHtml.test(string)
     ? string.replace(
         reEscapedHtml,
@@ -37,5 +37,3 @@ function unescape(string: string) {
       )
     : string || "";
 }
-
-export default unescape;
