@@ -512,3 +512,12 @@ export const MAX_SAFE_INTEGER = 9007199254740991;
 export const MAX_INTEGER = 1.7976931348623157e308;
 export const stubTrue = () => true as true;
 export const stubFalse = () => false as false;
+export const stubArray = function () {
+  return [];
+};
+export const stubObject = function () {
+  return {};
+};
+export const stubString = function () {
+  return "";
+};
