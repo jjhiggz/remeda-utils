@@ -22,7 +22,7 @@ import { words } from "./words";
  * // => 'fooBar'
  */
 const camelCase = (string: string) => {
-  return (words(toString(string).replace(/['\u2019]/g, "")) as string[]).reduce(
+  return words(toString(string).replace(/['\u2019]/g, "")).reduce(
     (result, word, index) => {
       word = word.toLowerCase();
       return result + (index ? upperFirst(word) : word);

@@ -15,14 +15,17 @@ function asciiWords(str: string) {
   return str.match(reAsciiWord);
 }
 
-export function words(string: string) {
+export function words(string: string): string[] {
   const result = hasUnicodeWord(string)
     ? unicodeWords(string)
     : asciiWords(string);
   return result || [];
 }
 
-function _wordsWithPattern(string: string, pattern: MatchParams[0] | string) {
+function _wordsWithPattern(
+  string: string,
+  pattern: MatchParams[0] | string
+): string[] {
   if (pattern === undefined) {
     const result = hasUnicodeWord(string)
       ? unicodeWords(string)
