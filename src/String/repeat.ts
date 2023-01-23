@@ -17,8 +17,12 @@
  * repeat('abc', 0)
  * // => ''
  */
-export function repeat(string: string, n: number) {
+export function repeat(string: string, n?: number) {
   let result = "";
+
+  if (n === undefined) {
+    return string;
+  }
   if (!string || n < 1 || n > Number.MAX_SAFE_INTEGER) {
     return result;
   }

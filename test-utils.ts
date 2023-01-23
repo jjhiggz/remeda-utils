@@ -523,4 +523,11 @@ export const stubString = function () {
   return "";
 };
 
+export const stubThree = () => 3;
+
 export const assertEqual = (A: any, B: any) => expect(A).toEqual(B);
+
+export const nativeParseInt = (string: string, radix: number) => {
+  return parseInt(string, radix);
+};
+export const stubZero = () => 0;
